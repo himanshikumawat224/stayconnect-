@@ -1,0 +1,1142 @@
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f4f6fb;
+    color: #333;
+}
+
+/* ================= LOGIN PAGE ================= */
+.login-body {
+    height: 100vh;
+    background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 900px;
+    height: 520px;
+    display: flex;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.3);
+    background: rgba(255,255,255,0.97);
+}
+
+.login-left {
+    flex: 1;
+    background: linear-gradient(160deg, #2563eb, #1e40af);
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-left h1 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.login-left p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.login-right {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.login-right h2 {
+    color: #1e40af;
+}
+
+.small-text {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* ================= INPUTS ================= */
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+    height: 90px;
+}
+
+/* ================= BUTTONS ================= */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-blue {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-green {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    font-size: 22px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.navbar a.logout {
+    font-weight: bold;
+}
+
+/* ================= STATS ================= */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 25px;
+}
+
+.stat-card {
+    padding: 25px;
+    border-radius: 16px;
+    color: white;
+    font-size: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.stat-card b {
+    font-size: 30px;
+}
+
+.blue { background: linear-gradient(135deg, #2563eb, #1e40af); }
+.green { background: linear-gradient(135deg, #16a34a, #22c55e); }
+.purple { background: linear-gradient(135deg, #7c3aed, #9333ea); }
+
+/* ================= CARDS ================= */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card.wide {
+    width: calc(100% - 40px);
+}
+
+.card h2, .card h3 {
+    margin-bottom: 15px;
+    color: #1e40af;
+}
+
+/* ================= NOTICE ================= */
+.notice-box {
+    background: #eef2ff;
+    padding: 15px;
+    border-left: 6px solid #2563eb;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.notice-box h4 {
+    margin-bottom: 5px;
+}
+
+.notice-box span {
+    font-size: 12px;
+    color: #555;
+}
+
+/* ================= TABLE ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #f1f5f9;
+}
+
+.status {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* ================= LIST ================= */
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 10px;
+    background: #f1f5f9;
+    margin: 8px 0;
+    border-radius: 8px;
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+/* ===== TABLE FIX ===== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+    text-align: center;   /* 👈 alignment fix */
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    background: #f1f5f9;
+    font-weight: bold;
+}
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Button */
+.dropbtn {
+    cursor: pointer;
+}
+
+/* Hidden dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1e293b;
+    min-width: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 10px 14px;
+    display: block;
+    text-decoration: none;
+}
+
+/* Hover effect */
+.dropdown-content a:hover {
+    background-color: #334155;
+}
+
+/* SHOW dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*...............................................
+/* ===== BASE ===== */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    transition: 0.3s;
+}
+
+/* ===== LIGHT THEME ===== */
+body.light {
+    background: #f5f7fb;
+    color: #222;
+}
+
+body.light .sidebar {
+    background: #ffffff;
+}
+
+body.light .logo,
+body.light .nav-links a {
+    color: #0f172a;
+}
+
+body.light .nav-links a:hover {
+    background: rgba(15, 23, 42, 0.06);
+    color: #0f172a;
+}
+
+/* ===== DARK THEME ===== */
+body.dark {
+    background: radial-gradient(circle at top, #1a1f3a, #0b1020);
+    color: #fff;
+}
+
+body.dark .sidebar {
+    background: #0f172a;
+}
+
+body.dark .logo {
+    color: #fff;
+}
+
+body.dark .nav-links a {
+    color: #d1d5db;
+}
+
+body.dark .nav-links a:hover {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#themeToggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 70%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.page-title {
+    margin-bottom: 20px;
+}
+
+/* ===== GLASS CARD ===== */
+.glass {
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* ===== FORM ===== */
+/* ===== FORM CARD WIDTH CONTROL ===== */
+.form-card {
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+/* GRID LAYOUT */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+/* GROUP */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABEL */
+.form-group label {
+    font-size: 13px;
+    margin-bottom: 5px;
+    opacity: 0.7;
+}
+
+/* INPUT FIX */
+input, textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+/* TEXTAREA HEIGHT CONTROL */
+textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+/* BUTTON ALIGNMENT */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* BUTTON IMPROVE */
+.btn {
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+/* OPTIONAL: CENTER PAGE NICELY */
+.container {
+    width: 60%;
+}
+
+/* ===== ANNOUNCEMENT CARDS ===== */
+.announcement-card {
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+/* DARK CARD STYLE */
+body.dark .announcement-card {
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 0 20px rgba(100, 120, 255, 0.2);
+}
+
+/* LIGHT CARD STYLE */
+body.light .announcement-card {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* HOVER EFFECT */
+.announcement-card:hover {
+    transform: translateY(-5px) scale(1.01);
+}
+
+/* HEADER */
+.announcement-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* EDIT LINK */
+.edit-link {
+    font-size: 12px;
+    color: #7c83ff;
+    text-decoration: none;
+}
+/* FORM CARD */
+.form-card {
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+/* GRID */
+.form-grid {
+    display: grid;
+    gap: 15px;
+}
+
+/* GROUP */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABEL */
+.form-group label {
+    font-size: 13px;
+    margin-bottom: 5px;
+    opacity: 0.7;
+}
+
+/* INPUT */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* TEXTAREA */
+textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+/* BUTTON ALIGN */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+/* NAV RIGHT */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* AVATAR */
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6a5acd, #8a2be2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+/* TOGGLE */
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* MENU */
+.dropdown-menu {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: rgba(20, 25, 50, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 10px;
+    width: 160px;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+
+/* SHOW MENU */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* MENU LINKS */
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* HOVER */
+.dropdown-menu a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* LOGOUT RED */
+.logout {
+    color: #ff4d4d;
+}
+/* LAYOUT */
+.layout {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: #0f172a;
+    padding: 20px;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+body.dark .logo {
+    color: #fff;
+}
+
+/* NAV LINKS */
+.nav-links a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+body.dark .nav-links a {
+    color: #d1d5db;
+}
+
+body.dark .nav-links a:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+}
+
+/* TOPBAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+/* CONTENT */
+.content {
+    padding: 20px;
+}
+.dropdown-content {
+    z-index: 1000;
+}
+/* ================= SECTION HEADER ================= */
+.section-header h2 {
+    margin-bottom: 5px;
+}
+
+.section-header p {
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+/* ================= FORM ================= */
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* ================= BUTTON ================= */
+.btn.primary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================= PAGE TITLE ================= */
+.page-title {
+    margin: 20px 0;
+}
+
+/* ================= GRID ================= */
+.announcement-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ================= CARD ================= */
+.announcement-card {
+    padding: 20px;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.announcement-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ================= HEADER ================= */
+.announcement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* ================= MESSAGE ================= */
+.announcement-message {
+    margin: 10px 0;
+}
+
+/* ================= ACTION ================= */
+.edit-btn {
+    text-decoration: none;
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+/* ================= EMPTY ================= */
+.empty-state {
+    text-align: center;
+    margin-top: 40px;
+    opacity: 0.7;
+}
+/* ================= PROFILE ================= */
+.profile-card {
+    display: flex;
+    align-items: center;
+}
+
+/* TOP */
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* AVATAR */
+.profile-avatar {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+/* ROLE BADGE */
+.role-badge {
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    background: rgba(59,130,246,0.2);
+    display: inline-block;
+}
+
+/* ================= INFO ================= */
+.profile-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.info-box {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 12px;
+    min-width: 150px;
+}
+
+.info-box span {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.info-box p {
+    margin: 5px 0 0;
+    font-weight: 500;
+}
+
+/* ACTIVE */
+.active {
+    color: #22c55e;
+}
+
+/* ================= ACTIONS ================= */
+.profile-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* BUTTONS */
+.btn.primary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btn.danger {
+    background: #ef4444;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+    transition: all 0.3s ease;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+    display: flex;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 220px;
+    background: #0f172a;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.nav-links a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.nav-links a:hover {
+    background: #1e293b;
+    color: white;
+}
+
+/* ===== MAIN ===== */
+.main {
+    flex: 1;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ===== BUTTON ===== */
+#themeToggle {
+    border: none;
+    background: #e2e8f0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    color: #2563eb;
+}
+
+/* ===== TABLE ===== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    background: #f1f5f9;
+    padding: 12px;
+}
+
+.data-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* ===== BUTTONS ===== */
+.btn-green {
+    background: #22c55e;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-green:hover {
+    background: #16a34a;
+}
+
+.btn-blue {
+    background: #2563eb;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* ===== INPUTS ===== */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* ========================================= */
+/* ========== 🌙 DARK MODE FIX ============== */
+/* ========================================= */
+
+body.dark {
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: #e2e8f0;
+}
+
+/* MAIN AREA */
+body.dark .main {
+    background: transparent;
+}
+
+/* CARD FIX */
+body.dark .card {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+/* TABLE FIX */
+body.dark .data-table th {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+body.dark .data-table td {
+    border-bottom: 1px solid #334155;
+    color: #cbd5e1;
+}
+
+/* INPUT FIX */
+body.dark input,
+body.dark textarea,
+body.dark select {
+    background: #0f172a;
+    color: #e2e8f0;
+    border: 1px solid #475569;
+}
+
+/* BUTTON FIX */
+body.dark #themeToggle {
+    background: #334155;
+    color: white;
+}
+/* ACTION COLUMN FIX */
+.action-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+/* make both forms same width */
+.action-box form {
+    width: 150px;
+}
+
+/* select full width */
+.action-box select {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+/* buttons full width */
+.action-box button {
+    width: 100%;
+}
+.btn-red {
+    background: #ef4444;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: auto;   /* 🔥 change this */
+}
+.btn-red:hover {
+    background: #dc2626;
+}
+/* ACTION COLUMN CLEAN ALIGNMENT */
+.action-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* SAME WIDTH FOR BOTH FORMS */
+.action-box form {
+    width: 160px;
+}
+
+/* SELECT FULL WIDTH */
+.action-box select {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+/* BOTH BUTTONS SAME SIZE */
+.action-box button {
+    width: 100%;
+}
+
+/* REMOVE OLD WIDTH FROM DELETE */
+.btn-red {
+    width: 100%;   /* controlled by parent now */
+}
+/* RULES LIST BASE STYLE */
+.rules-list {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-list li {
+    background: #f1f5f9;
+    color: #1e293b;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.rules-list li:hover {
+    transform: translateX(6px);
+    background: #3b82f6;
+    color: white;
+}
+
+/* 🌙 DARK MODE FIX */
+body.dark .rules-list li {
+    background: #334155;
+    color: #e2e8f0;
+    border: 1px solid #475569;
+}
+
+/* DARK HOVER */
+body.dark .rules-list li:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* TEXTAREA DARK MODE */
+body.dark textarea {
+    background: #0f172a;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+}
+
+/* PLACEHOLDER */
+body.dark textarea::placeholder {
+    color: #94a3b8;
+}
